@@ -1,0 +1,7 @@
+{
+  "name": "bipclusion#2-designify",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
