@@ -1,0 +1,18 @@
+.content {
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.spinner {
+  position: absolute;
+  bottom: 20px; /* Adjust this value based on your needs */
+  left: 50%;
+  transform: translateX(-50%);
+}
