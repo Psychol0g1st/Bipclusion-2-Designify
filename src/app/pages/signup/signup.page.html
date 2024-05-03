@@ -1,13 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1>Register</h1>
+
+  @if (errorMessage) {
+  <div>{{ errorMessage }}</div>
+  }
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+      <input type="text" placeholder="Username" formControlName="username" />
+    </div>
+    <div>
+      <input type="text" placeholder="Email" formControlName="email" />
+    </div>
+    <div>
+      <input type="password" placeholder="Password" formControlName="password" />
+    </div>
+    <div>
+      <ion-button type="submit" expand="block" shape="round">
+        Sign Up
+      </ion-button>
+      <ion-row>
+        <ion-col size="12">
+          <a routerLink="/signin">Already have an account? Sign In</a>
+        </ion-col>
+      </ion-row>
+    </div>
+  </form>
 </ion-content>

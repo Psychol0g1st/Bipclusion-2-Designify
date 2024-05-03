@@ -43,12 +43,13 @@ export class LoadingScreenPage implements OnInit {
   constructor(private router: Router) {}
 
   navigate() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/signin']);
   }
 
   ngOnInit(): void {
+    console.log('Loading Screen');
     setTimeout(() => {
       this.navigate();
-    }, 1000);
+    }, 2000);
   }
 }

@@ -3,8 +3,10 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: '/loading-screen',
-    pathMatch: 'full',
+    loadComponent: () =>
+      import('./pages/loading-screen/loading-screen.page').then(
+        (m) => m.LoadingScreenPage
+      ),
   },
   {
     path: 'signin',
@@ -17,10 +19,10 @@ export const routes: Routes = [
       import('./pages/signup/signup.page').then((m) => m.SignupPage),
   },
   {
-    path: 'reset-password',
+    path: 'forgot-password',
     loadComponent: () =>
-      import('./pages/reset-password/reset-password.page').then(
-        (m) => m.ResetPasswordPage
+      import('./pages/forgot-password/forgot-password.page').then(
+        (m) => m.ForgotPasswordPage
       ),
   },
   {
@@ -32,12 +34,5 @@ export const routes: Routes = [
     path: 'home',
     loadComponent: () =>
       import('./pages/home/home.page').then((m) => m.HomePage),
-  },
-  {
-    path: 'loading-screen',
-    loadComponent: () =>
-      import('./pages/loading-screen/loading-screen.page').then(
-        (m) => m.LoadingScreenPage
-      ),
   },
 ];
