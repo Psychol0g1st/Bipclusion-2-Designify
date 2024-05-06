@@ -48,8 +48,8 @@ export class LoadingScreenPage implements OnInit {
 
   ngOnInit(): void {
     console.log('Loading Screen');
-    setTimeout(() => {
-      this.navigate();
-    }, 2000);
+    // setTimeout(() => {
+    //   this.navigate();
+    // }, 2000);
   }
 }

@@ -17,6 +17,7 @@ import {
 } from '@ionic/angular/standalone';
 import { HttpClient } from '@angular/common/http';
 import { Router, RouterModule } from '@angular/router';
+import { AuthService } from 'src/services/auth.service';
 
 @Component({
   selector: 'app-signup',
@@ -40,6 +41,7 @@ import { Router, RouterModule } from '@angular/router';
 export class SignupPage {
   fb = inject(FormBuilder);
   router = inject(Router);
+  authService = inject(AuthService);
 
   form = this.fb.nonNullable.group({
     username: ['', Validators.required],
@@ -50,5 +52,16 @@ export class SignupPage {
 
   onSubmit(): void {
     console.log('register');
+    const rawForm = this.form.getRawValue();
+    this.authService
+      .signup(rawForm.email, rawForm.password, rawForm.username)
+      .subscribe({
+        next: () => {
+          this.router.navigate(['/signin']);
+        },
+        error: (error) => {
+          this.errorMessage = error?.code;
+        },
+      });
   }
 }

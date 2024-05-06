@@ -35,4 +35,12 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./pages/home/home.page').then((m) => m.HomePage),
   },
+  {
+    path: 'my-courses',
+    loadComponent: () => import('./pages/my-courses/my-courses.page').then( m => m.MyCoursesPage)
+  },
+  {
+    path: 'profile',
+    loadComponent: () => import('./pages/profile/profile.page').then( m => m.ProfilePage)
+  },
 ];
