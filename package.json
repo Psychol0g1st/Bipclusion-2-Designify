@@ -1,8 +1,8 @@
 {
   "name": "bipclusion-2-designify",
   "version": "0.0.1",
-  "author": "Ionic Framework",
-  "homepage": "https://ionicframework.com/",
+  "author": "Antal Svec",
+  "homepage": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -17,6 +17,7 @@
     "@angular/common": "^17.0.2",
     "@angular/compiler": "^17.0.2",
     "@angular/core": "^17.0.2",
+    "@angular/fire": "17.0.1",
     "@angular/forms": "^17.0.2",
     "@angular/platform-browser": "^17.0.2",
     "@angular/platform-browser-dynamic": "^17.0.2",
@@ -31,7 +32,8 @@
     "@capacitor/status-bar": "5.0.7",
     "@ionic/angular": "^7.5.0",
     "@ionic/pwa-elements": "^3.2.2",
-    "ionicons": "^7.2.1",
+    "firebase": "^10.11.1",
+    "ionicons": "^7.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

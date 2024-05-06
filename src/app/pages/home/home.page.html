@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <div class="name">Hi, {{this.authService.currentUserSig()?.username}}</div>
+    <div class="text">What Would you like to learn Today? Search Below.</div>
+    <div class="icon"><ion-img src="/assets/logo-image.png"></ion-img></div>
+  </div>
+  <!-- <div class="search"> -->
+  <ion-searchbar [debounce]="1000" (ionInput)="handleSearch($event)" placeholder="Search for..."></ion-searchbar>
+  <!-- </div> -->
+  <div class=" wisdoms">
+  </div>
+  <div class="courses"></div>
+  <div class="modules"></div>
+
+</ion-content>
