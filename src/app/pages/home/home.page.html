@@ -13,9 +13,35 @@
   <!-- <div class="search"> -->
   <ion-searchbar [debounce]="1000" (ionInput)="handleSearch($event)" placeholder="Search for..."></ion-searchbar>
   <!-- </div> -->
+  @if (todaysWisdom !== null) {
   <div class=" wisdoms">
+    <div class="wisdom-card">
+      <div class="date">{{todaysWisdom.date}}</div>
+      <p>Today's Wisdom</p>
+      <p class="wisdom">{{todaysWisdom.title}}</p>
+    </div>
   </div>
-  <div class="courses"></div>
+
+  }
+  <div class="courses">
+    <div class="heading">
+      <h3>Courses</h3>
+      <ion-button fill="clear">
+        <span>See all</span> <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="buttons filter">
+      <ion-button shape="round">
+        All
+      </ion-button>
+      <ion-button shape="round">
+        Not completed
+      </ion-button>
+      <ion-button shape="round">
+        Completed
+      </ion-button>
+    </div>
+  </div>
   <div class="modules"></div>
 
 </ion-content>
